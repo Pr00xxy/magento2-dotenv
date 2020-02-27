@@ -1,0 +1,23 @@
+
+<!--
+  ~ Copyright © Hampus Westman 2020
+  ~ See LICENCE provided with this module for licence details
+  ~
+  ~ @author     Hampus Westman <hampus.westman@gmail.com>
+  ~ @copyright  Copyright (c) 2020 Hampus Westman
+  ~ @license    MIT License https://opensource.org/licenses/MIT
+  ~ @link       https://github.com/Pr00xxy
+  ~
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+   <type name="Magento\Config\Model\Config\Processor\EnvironmentPlaceholder">
+       <plugin name="prooxxy_dotenv_after_environment_process" type="PrOOxxy\DotEnv\Plugin\EnvironmentPlaceholderPlugin" />
+   </type>
+
+    <type name="PrOOxxy\DotEnv\Plugin\EnvironmentPlaceholderPlugin">
+        <arguments>
+            <argument name="envFile" xsi:type="string">.env</argument>
+        </arguments>
+    </type>
+</config>
