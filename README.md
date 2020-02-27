@@ -27,7 +27,26 @@ and injects it into the global $_ENV array
 It does this before Magento processes other environments variables.
 It does override any preexisting variables with the same names
 
+## Usage
+
+1. Add a file called .env into app/etc
+2. Follow the official devdocs [instructions](https://devdocs.magento.com/guides/v2.3/config-guide/deployment/pipeline/example/environment-variables.html#step-4-update-the-production-system) for how to create the env variable format
+3. Add your newly formatted variables into the .env like so e.g
+
+        CONFIG__DEFAULT__SYSTEM__SMTP__HOST="8.8.8.8"
+
+4. Changes like these will require a flush of config cache
+
+```bash
+    php bin/magento cache:flush config
+```
+
 ## Compability
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Todo
+
+- Add Unit tests
+- Require chmod 600 or tighter restrictions
