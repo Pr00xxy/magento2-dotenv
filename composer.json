@@ -7,7 +7,8 @@
         "vlucas/phpdotenv": "~2.0"
     },
     "type": "magento2-module",
-    "version": "1.0.0",
+    "license": "MIT",
+    "version": "1.0.2",
     "autoload": {
         "files": [ "registration.php" ],
         "psr-4": { "PrOOxxy\\DotEnv\\": ""}
