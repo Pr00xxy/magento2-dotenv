@@ -30,6 +30,7 @@ It does override any preexisting variables with the same names
 ## Usage
 
 1. Add a file called .env into app/etc
+NOTE! Since release 1.1.0 the .env file must have chmod level 0644 or below
 2. Follow the official devdocs [instructions](https://devdocs.magento.com/guides/v2.3/config-guide/deployment/pipeline/example/environment-variables.html#step-4-update-the-production-system) for how to create the env variable format
 3. Add your newly formatted variables into the .env like so e.g
 
@@ -38,7 +39,7 @@ It does override any preexisting variables with the same names
 4. Changes like these will require a flush of config cache
 
 ```bash
-    php bin/magento cache:flush config
+php bin/magento cache:flush config
 ```
 
 ## Compability
