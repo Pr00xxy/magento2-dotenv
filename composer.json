@@ -1,5 +1,5 @@
 {
-    "name": "prooxxy/dotenv",
+    "name": "prooxxy/magento2-dotenv",
     "description": "",
     "require": {
         "php": "~7.1.0|~7.2.0|~7.3.0",
