@@ -28,13 +28,19 @@ class EnvironmentPlaceholderPlugin
      * @var string
      */
     private $envFile;
+    /**
+     * @var int
+     */
+    private $chmodLevel;
 
     public function __construct(
         Filesystem $filesystem,
-        string $envFile
+        string $envFile,
+        int $chmodLevel
     ) {
         $this->filesystem = $filesystem;
         $this->envFile = $envFile;
+        $this->chmodLevel = $chmodLevel;
     }
 
     /**
@@ -57,7 +63,13 @@ class EnvironmentPlaceholderPlugin
 
         $dirPath = $readInstance->getAbsolutePath();
 
-        if (!$readInstance->isFile(\implode(DIRECTORY_SEPARATOR, [$dirPath, $this->envFile]))) {
+        $filePath = \implode(DIRECTORY_SEPARATOR, [$dirPath, $this->envFile]);
+
+        if (!$readInstance->isFile($filePath)) {
+            return;
+        }
+
+        if (!$this->isFilePermissionsValid($filePath)) {
             return;
         }
 
@@ -65,5 +77,10 @@ class EnvironmentPlaceholderPlugin
 
         $dotenv->overload();
 
+    }
+
+    private function isFilePermissionsValid(string $filePath): bool
+    {
+        return  (int) \substr(\sprintf('%o', \fileperms($filePath)), -4) <= $this->chmodLevel;
     }
 }

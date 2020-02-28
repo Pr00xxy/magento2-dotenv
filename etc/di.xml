@@ -18,6 +18,7 @@
     <type name="PrOOxxy\DotEnv\Plugin\EnvironmentPlaceholderPlugin">
         <arguments>
             <argument name="envFile" xsi:type="string">.env</argument>
+            <argument name="chmodLevel" xsi:type="number">644</argument>
         </arguments>
     </type>
 </config>
