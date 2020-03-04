@@ -11,9 +11,9 @@
   -->
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-   <type name="Magento\Config\Model\Config\Processor\EnvironmentPlaceholder">
+    <type name="Magento\Config\Model\Config\Processor\EnvironmentPlaceholder">
        <plugin name="prooxxy_dotenv_after_environment_process" type="PrOOxxy\DotEnv\Plugin\EnvironmentPlaceholderPlugin" />
-   </type>
+    </type>
 
     <type name="PrOOxxy\DotEnv\Plugin\EnvironmentPlaceholderPlugin">
         <arguments>
