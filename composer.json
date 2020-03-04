@@ -1,6 +1,7 @@
 {
     "name": "prooxxy/magento2-dotenv",
     "description": "Adds support for .env files to Magento 2",
+    "keywords": ["Magento 2", "Magento Module", "dotenv", ".env"],
     "require": {
         "php": "~7.1.0|~7.2.0|~7.3.0",
         "magento/magento-composer-installer": "*",

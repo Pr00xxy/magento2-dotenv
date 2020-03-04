@@ -24,13 +24,11 @@ class EnvironmentPlaceholderPlugin
 
     /** @var Filesystem */
     private $filesystem;
-    /**
-     * @var string
-     */
+
+    /** @var string */
     private $envFile;
-    /**
-     * @var int
-     */
+
+    /** @var int */
     private $chmodLevel;
 
     public function __construct(
@@ -54,7 +52,7 @@ class EnvironmentPlaceholderPlugin
         array $result
     ): array {
         $this->importDotenvFile();
-        return [$result];
+        return [ $result ];
     }
 
     private function importDotenvFile()
