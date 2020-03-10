@@ -61,7 +61,7 @@ class EnvironmentPlaceholderPlugin
 
         $dirPath = $readInstance->getAbsolutePath();
 
-        $filePath = \implode(DIRECTORY_SEPARATOR, [$dirPath, $this->envFile]);
+        $filePath = $dirPath . $this->envFile;
 
         if (!$readInstance->isFile($filePath)) {
             return;
