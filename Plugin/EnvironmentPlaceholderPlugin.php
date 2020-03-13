@@ -44,15 +44,15 @@ class EnvironmentPlaceholderPlugin
     /**
      * @param EnvironmentPlaceholder $subject
      * @param array $result
-     * @return array
+     * @return null
      * @see EnvironmentPlaceholder::process
      */
     public function beforeProcess(
         EnvironmentPlaceholder $subject,
         array $result
-    ): array {
+    ) {
         $this->importDotenvFile();
-        return [ $result ];
+        return null;
     }
 
     private function importDotenvFile()

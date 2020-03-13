@@ -6,11 +6,15 @@ This module was created because magento [recommends](https://devdocs.magento.com
 
 ## Installation
 
-Use the package manager [composer](https://getcomposer.org/) that is bundled with magento 2 to install.
+Use the package manager [composer](https://getcomposer.org/) to install this.
 
 ```bash
 composer install prooxxy/magento2-dotenv
 ```
+
+### Alternative installation
+
+If you don't have the possibility to use composer it's possible to copy the root of this project into the `app/code/PrOOxxy/DotEnv` folder of your magento installation
 
 Make sure the module is enable before start using
 
