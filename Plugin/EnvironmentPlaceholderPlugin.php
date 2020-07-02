@@ -25,10 +25,8 @@ class EnvironmentPlaceholderPlugin
     /** @var Filesystem */
     private $filesystem;
 
-    /** @var string */
     private $envFile;
 
-    /** @var int */
     private $chmodLevel;
 
     public function __construct(
@@ -41,12 +39,6 @@ class EnvironmentPlaceholderPlugin
         $this->chmodLevel = $chmodLevel;
     }
 
-    /**
-     * @param EnvironmentPlaceholder $subject
-     * @param array $result
-     * @return null
-     * @see EnvironmentPlaceholder::process
-     */
     public function beforeProcess(
         EnvironmentPlaceholder $subject,
         array $result
@@ -77,7 +69,7 @@ class EnvironmentPlaceholderPlugin
 
     }
 
-    private function isFilePermissionsValid(string $filePath): bool
+    private function isFilePermissionsValid(string $filePath)
     {
         return  (int) \substr(\sprintf('%o', \fileperms($filePath)), -4) <= $this->chmodLevel;
     }

@@ -9,13 +9,14 @@
         }
     ],
     "require": {
-        "php": "~7.1.0|~7.2.0|~7.3.0",
+        "php": ">=7.1",
         "magento/magento-composer-installer": "*",
-        "vlucas/phpdotenv": "~2.0"
+        "magento/module-config": ">=100.1.2",
+        "vlucas/phpdotenv": "^2"
     },
     "type": "magento2-module",
     "license": "MIT",
-    "version": "1.2.1",
+    "version": "1.3.0",
     "autoload": {
         "files": [ "registration.php" ],
         "psr-4": { "PrOOxxy\\DotEnv\\": ""}
