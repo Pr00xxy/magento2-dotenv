@@ -49,8 +49,10 @@ php bin/magento cache:flush config
 
 ## Compability
 
-This module is compatible with PHP 7.1 and above and Magento 2.3.x and above  
-(Module might be compatible with Magento 2.2.x but not supported)
+Magento 2 Open Source 2.3.x
+Magento 2 Open Source 2.4.x
+Magento 2 Commerce 2.3.x
+Magento 2 Commerce 2.4.x
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

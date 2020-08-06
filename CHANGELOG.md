@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.2.2] - 2020-07-02
 ### Changed
 - Code quality improvements
-- Updated php requirements to atleast 7.1
+- Updated php requirements to minimum 7.1
 - Added dependency to the config module
 - Fixed grammar and mistakes in the readme.md
 
